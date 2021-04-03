@@ -53,6 +53,8 @@ func main() {
 	fmt.Println(&savio.Nome)
 	var nome2 *string //* ponteiro
 	nome2 = &savio.Nome
-	print(nome2)
-	print(*nome2)
+	println(nome2)  //ENDEREÇO DE MEMORIA
+	println(*nome2) //CONTEUDO
+	*nome2 = "Savio mod"
+	fmt.Println(savio.Nome, &savio.Nome)
 }
