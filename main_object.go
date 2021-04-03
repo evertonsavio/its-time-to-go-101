@@ -1,14 +1,30 @@
 package main
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 type Pessoa struct {
 	Nome  string
 	Idade int
 }
 
-func walk(pessoa Pessoa) {
+func walk0(pessoa Pessoa) {
+	fmt.Println(pessoa, "andouuu")
+}
+func walk(pessoa Pessoa) error {
+	if pessoa.Nome != "Savio" {
+		return errors.New("Nome deve ser Savio")
+	}
 	fmt.Println(pessoa.Nome, "andou")
+	return nil
+}
+func walk2(pessoa Pessoa) (string, error) {
+	if pessoa.Nome != "Savio" {
+		return "", errors.New("Nome deve ser Savio")
+	}
+	return pessoa.Nome + "andou", nil
 }
 
 func main() {
@@ -18,6 +34,10 @@ func main() {
 		Idade: 34,
 	}
 	fmt.Println(savio.Nome)
-	walk(savio)
+	res, err := walk2(savio)
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+	fmt.Println(res)
 
 }
