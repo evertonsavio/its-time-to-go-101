@@ -7,6 +7,10 @@ type Pessoa struct {
 	Idade int
 }
 
+func walk(pessoa Pessoa) {
+	fmt.Println(pessoa.Nome, "andou")
+}
+
 func main() {
 
 	savio := Pessoa{
@@ -14,5 +18,6 @@ func main() {
 		Idade: 34,
 	}
 	fmt.Println(savio.Nome)
+	walk(savio)
 
 }
