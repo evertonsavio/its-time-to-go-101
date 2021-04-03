@@ -8,3 +8,9 @@ go run main.go
 go build main.go
 GOOS=windows go build main.go
 ```
+
+* Packages
+```
+go mod init github.com/havyx/its-time-to-golang
+go mod tidy
+```
