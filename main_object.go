@@ -49,4 +49,10 @@ func main() {
 	}
 	fmt.Println(res)
 
+	//endereço de memoria
+	fmt.Println(&savio.Nome)
+	var nome2 *string //* ponteiro
+	nome2 = &savio.Nome
+	print(nome2)
+	print(*nome2)
 }
