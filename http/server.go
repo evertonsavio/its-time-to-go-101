@@ -1,8 +1,7 @@
-package http
+package main
 
 import (
 	"net/http"
-
 	"github.com/havyx/Golang-Its-time-to-go/model"
 	"github.com/labstack/echo/v4"
 )
