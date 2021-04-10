@@ -14,3 +14,12 @@ GOOS=windows go build main.go
 go mod init github.com/havyx/its-time-to-golang
 go mod tidy
 ```
+
+---
+* VS Code Extension  
+```
+ctrl + shift + x = go extension
+ctrl + shift + p => type: go: Install/Update Tools
+check all
+
+```
